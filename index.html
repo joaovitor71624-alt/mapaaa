@@ -1,0 +1,118 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Controle de Ruas - Atalaia Fibra</title>
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet - mapa -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+</head>
+
+<body>
+
+    <header class="topo">
+        <div>
+            <h1>📍 Atalaia Fibra</h1>
+            <p>Controle de Panfletagem e Vendas</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- PAINEL -->
+        <section class="painel">
+
+            <h2>📊 Resumo</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <span>Ruas marcadas</span>
+                    <strong id="totalRuas">0</strong>
+                </div>
+
+                <div class="card">
+                    <span>Panfletagens</span>
+                    <strong id="totalPanfletagens">0</strong>
+                </div>
+
+                <div class="card">
+                    <span>Vendas</span>
+                    <strong id="totalVendas">0</strong>
+                </div>
+
+            </div>
+
+            <div class="botoes">
+
+                <button onclick="ativarMarcacao()" class="btn principal">
+                    📍 Marcar rua
+                </button>
+
+                <button onclick="minhaLocalizacao()" class="btn">
+                    🎯 Minha localização
+                </button>
+
+                <button onclick="limparTudo()" class="btn perigo">
+                    🗑️ Limpar tudo
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAPA -->
+        <section class="mapa-area">
+
+            <h2>🗺️ Mapa de trabalho</h2>
+
+            <p class="instrucao">
+                Clique em "Marcar rua" e depois clique no local da rua onde você passou.
+            </p>
+
+            <div id="map"></div>
+
+        </section>
+
+
+        <!-- REGISTROS -->
+        <section class="registros">
+
+            <div class="titulo-registros">
+                <h2>📋 Ruas trabalhadas</h2>
+
+                <button onclick="exportarDados()" class="btn exportar">
+                    📥 Exportar
+                </button>
+            </div>
+
+            <div id="listaRegistros">
+                <p class="vazio">
+                    Nenhuma rua marcada ainda.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- JavaScript do projeto -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
