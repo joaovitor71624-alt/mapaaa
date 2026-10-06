@@ -1,0 +1,292 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f5f8;
+    color: #17202a;
+}
+
+/* CABEÇALHO */
+
+.topo {
+    background: linear-gradient(135deg, #0066ff, #003b99);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.topo h1 {
+    font-size: 25px;
+}
+
+.topo p {
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+
+/* PAINEL */
+
+.painel {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.painel h2 {
+    margin-bottom: 15px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #f5f8fc;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    border-left: 5px solid #0066ff;
+}
+
+.card span {
+    display: block;
+    color: #666;
+    font-size: 14px;
+}
+
+.card strong {
+    display: block;
+    font-size: 30px;
+    margin-top: 7px;
+    color: #0066ff;
+}
+
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 18px;
+    background: #e8edf3;
+    color: #17202a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.principal {
+    background: #0066ff;
+    color: white;
+}
+
+.btn.perigo {
+    background: #e53935;
+    color: white;
+}
+
+.btn.exportar {
+    background: #16a085;
+    color: white;
+}
+
+
+/* MAPA */
+
+.mapa-area {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.mapa-area h2 {
+    margin-bottom: 5px;
+}
+
+.instrucao {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+/* REGISTROS */
+
+.registros {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.titulo-registros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+/* REGISTRO INDIVIDUAL */
+
+.registro {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #fafafa;
+}
+
+.registro h3 {
+    color: #0066ff;
+    margin-bottom: 8px;
+}
+
+.registro p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.acoes {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.btn-pequeno {
+    border: none;
+    border-radius: 7px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-venda {
+    background: #16a085;
+    color: white;
+}
+
+.btn-pan {
+    background: #f39c12;
+    color: white;
+}
+
+.btn-excluir {
+    background: #e53935;
+    color: white;
+}
+
+
+/* VAZIO */
+
+.vazio {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+
+/* POPUP DO MAPA */
+
+.popup-form {
+    min-width: 220px;
+}
+
+.popup-form input,
+.popup-form textarea,
+.popup-form select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.popup-form button {
+    width: 100%;
+    border: none;
+    padding: 9px;
+    margin-top: 5px;
+    border-radius: 6px;
+    background: #0066ff;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #map {
+        height: 400px;
+    }
+
+    .titulo-registros {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .titulo-registros .btn {
+        width: 100%;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botoes .btn {
+        width: 100%;
+    }
+}
+```
